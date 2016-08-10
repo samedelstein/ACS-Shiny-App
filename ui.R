@@ -1,4 +1,6 @@
 library(shiny);library(ggvis)
+mergeACS <- read.csv("https://raw.githubusercontent.com/samedelstein/ACS-Shiny-App/master/mergeACS.csv")
+
 shinyUI(fluidPage(
   titlePanel("ACS data"),
   sidebarLayout(

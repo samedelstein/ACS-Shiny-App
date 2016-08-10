@@ -1,4 +1,5 @@
 library(shiny);library(ggvis)
+mergeACS <- read.csv("https://raw.githubusercontent.com/samedelstein/ACS-Shiny-App/master/mergeACS.csv")
 shinyServer(function(input, output) {
   plotData <- reactive({
     df <- mergeACS[,c(input$xVariable,input$yVariable, "geo_name")]
